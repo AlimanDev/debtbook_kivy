@@ -1,0 +1,41 @@
+<BGImage@FitImage>
+    source: "assets/images/img.png"
+    height: 400
+    radius: [10,]
+
+<Title@MDLabel>
+    adaptive_size: True
+    pos_hint: {'center_x': .5, 'center_y': .05}
+    size_hint: 1, 1
+    font_style: "H3"
+    font_size: dp(26)
+    color: "white"
+    x: dp(20)
+    halign: "center"
+
+<MainScreenView>
+    MDBoxLayout:
+        orientation: "vertical"
+        MDScreen:
+            MDSwiper:
+                MDSwiperItem:
+                    MDRelativeLayout:
+                        BGImage:
+                        Title:
+                            text: "Мне должны"
+                MDSwiperItem:
+                    MDRelativeLayout:
+                        BGImage:
+                        Title:
+                            text: "Я должен"
+                MDSwiperItem:
+                    MDRelativeLayout:
+                        BGImage:
+                        Title:
+                            text: "Список контактов"
+        MDBottomAppBar:
+            MDToolbar:
+                title: "DebtBook"
+                icon: "git"
+                type: "bottom"
+                left_action_items: [["menu", lambda x: x]]
